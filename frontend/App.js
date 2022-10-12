@@ -1,30 +1,66 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+
+//-------------------------------------------------------------------------------------------------------------------------------------
+//Importations faites
+import { Button,Image } from 'react-native';
+import { useState,useEffect } from 'react';
+//-------------------------------------------------------------------------------------------------------------------------------------
+
 
 export default function App() {
 
+
+//-------------------------------------------------------------------------------------------------------------------------------------
+  //Fonctions ajoutées
+  function fonctionTest(){
+    console.log("Ceci est un test")
+  }
+
+  useEffect(() => {
+    test()
+  }, [])
+
+//-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+//-------------------------------------------------------------------------------------------------------------------------------------
+  //Variables ajoutées
   const test = () => {
     fetch('https://aws.random.cat/meow')
     .then((res) => {
       return res.json()
     }).then((data) => {
-      console.log(data)
+      setImg(data.file)
+      //console.log(img)
     })
   }
 
+  const [img, setImg] = useState(' ')
+//-------------------------------------------------------------------------------------------------------------------------------------
+
+
+//-------------------------------------------------------------------------------------------------------------------------------------
+  //Corps de l'App
   return (
     <View style={styles.container}>
-      <Text>Ceci est une application pour malentendants!</Text>
+      <Image
+        source={{uri: img}}
+        style={styles.img}
+      /> 
+
       <Button 
       onPress={test}
-      title="Test"
-      color="#841584"
-      accessibilityLabel="Learn more about this purple button" 
+      title="Nouveau chat"
+      color="#f00"
       /> 
+
       <StatusBar style="auto" />
     </View>
   );
 }
+//-------------------------------------------------------------------------------------------------------------------------------------
 
 const styles = StyleSheet.create({
   container: {
@@ -33,4 +69,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  img: {
+    width: '80%',
+    height: '65%',
+    marginBottom: '5%'
+  }
 });
