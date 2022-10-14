@@ -1,0 +1,13 @@
+Sound sensors : 
+https://www.theengineeringprojects.com/document/sound-detector-library-for-proteus-v2-0/1
+
+
+Bluetooth : 
+https://www.theengineeringprojects.com/document/bluetooth-library-for-proteus/1
+
+
+Arduino: 
+https://www.electronique-mixte.fr/arduino-et-proteus-comment-ajouter-une-librairie-arduino/#google_vignette
+
+
+Je n'arrive pas à ajouter les fichiers des librairies depuis mon ordi vers GitHub. Voilà les liens pour le moment.
