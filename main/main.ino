@@ -13,6 +13,8 @@ SoftwareSerial mySerial(rxPin, txPin);
 void setup()
 {
 Serial.begin(9600); // intitialise la connexion série
+//Serial.begin(38400); // intitialise la connexion série
+//Serial.begin(74880); // intitialise la connexion série
 
 pinMode(A0,INPUT);
 
@@ -21,9 +23,9 @@ pinMode(A0,INPUT);
 
 
 void loop() {
-int readValue = analogRead(A0);
+  int readValue = analogRead(A0);
 
-Serial.println(readValue);
-delay(5);
+  Serial.println(readValue);
+  //delay(5);
 
 }
