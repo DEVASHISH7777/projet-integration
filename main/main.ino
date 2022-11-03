@@ -17,6 +17,7 @@ Serial.begin(9600); // intitialise la connexion série
 //Serial.begin(74880); // intitialise la connexion série
 
 pinMode(A0,INPUT);
+pinMode(2,OUTPUT);
 
 
 }
@@ -28,4 +29,14 @@ void loop() {
   Serial.println(readValue);
   //delay(5);
 
+  if(readValue>310){
+    digitalWrite(2, HIGH);
+    
+  }
+  else{
+    digitalWrite(2, LOW);
+
+  }
+
+  
 }
