@@ -52,7 +52,7 @@ export default function App() {
 
       <Button 
       onPress={test}
-      title="Nouveau chat"
+      title="Nouveau chat ta mère"
       color="#f00"
       /> 
 
